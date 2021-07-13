@@ -1,0 +1,25 @@
+
+
+https://www.rapidtables.com/calc/math/Exponent_Calculator.html
+
+calculatePow(base, exponent)
+
+test cases:
+base and exponent must not be null or empty
+base and exponent must be a positive integer
+base must not be equal to 0
+base raise to 1 = base
+
+
+// valid inputs
+private static int[][] getValidSamples() {
+        return new int[][]{
+                {10, 2, 100},
+                {9, 2, 81},
+                {3, 3, 27},
+                {4, 2, 16},
+                {9, 5, 59049},
+                {7, 4, 2401},
+                {2, 11, 2048}
+        };
+    }
