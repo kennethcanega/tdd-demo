@@ -14,10 +14,10 @@ public class CalculatorServiceImplTest {
 
     /*
         test scenarios:
-            when either num1 or num2 is empty, throw exception                  => ok
-            when either num1 or num2 has non numeric input, throw exception     => ok
-            when num1 or num2 less than 0, throw exception                      => ok
-            when num1 + num2 should return correct result:
+            when either num1 or num2 is empty, throw exception                  => done
+            when either num1 or num2 has non numeric input, throw exception     => done
+            when num1 or num2 less than 0, throw exception                      => done
+            when num1 + num2 should return correct result:                      => done
                 0 + 0       = 0
                 1 + 2       = 3
                 4 + 4       = 8
