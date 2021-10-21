@@ -1,11 +1,11 @@
 package calculator.service;
 
+import java.util.Arrays;
+
 public class CalculatorPart2 {
     public int sum(String... nums) {
-        int result = 0;
-        for (String num : nums) {
-            result += Integer.parseInt(num);
-        }
-        return result;
+        return Arrays.stream(nums)
+                .mapToInt(Integer::parseInt)
+                .sum();
     }
 }

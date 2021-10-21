@@ -11,12 +11,12 @@ class CalculatorPart2Test {
     @BeforeEach
     void setUp() {
         /*
-        input: 1 (string) , 2 (string) 	                         1,2 = 3 (int)
-        input: 1 (string), 2 (string), 3 (string)  	             1,2,3 = 6 (Int)
+        input: 1 (string) , 2 (string) 	                         1,2 = 3 (int)              => DONE
+        input: 1 (string), 2 (string), 3 (string)  	             1,2,3 = 6 (Int)            => DONE
 
-        3,4,5   => 12
-        4,5,6   => 15
-        6,7,8   => 21
+        3,4,5   => 12                                                                       => DONE
+        4,5,6   => 15                                                                       => DONE
+        6,7,8   => 21                                                                       => DONE
         */
         calculatorPart2 = new CalculatorPart2();
     }
