@@ -41,8 +41,7 @@ class DemoServiceTest {
     void calculatePow_whenBaseIsNull_thenThrowException() {
         CalculatorException thrown = assertThrows(
                 CalculatorException.class,
-                () -> demoService.calculatePow(null, "2"),
-                "Base must not be null or empty."
+                () -> demoService.calculatePow(null, "2")
         );
         assertThat(thrown.getMessage()).isEqualTo("Base must not be null or empty.");
     }
@@ -51,8 +50,7 @@ class DemoServiceTest {
     void calculatePow_whenBaseIsBlank_thenThrowException() {
         CalculatorException thrown = assertThrows(
                 CalculatorException.class,
-                () -> demoService.calculatePow("", "2"),
-                "Base must not be null or empty."
+                () -> demoService.calculatePow("", "2")
         );
         assertThat(thrown.getMessage()).isEqualTo("Base must not be null or empty.");
     }
@@ -61,8 +59,7 @@ class DemoServiceTest {
     void calculatePow_whenExponentIsNull_thenThrowException() {
         CalculatorException thrown = assertThrows(
                 CalculatorException.class,
-                () -> demoService.calculatePow("9", null),
-                "Exponent must not be null or empty."
+                () -> demoService.calculatePow("9", null)
         );
         assertThat(thrown.getMessage()).isEqualTo("Exponent must not be null or empty.");
     }
@@ -71,8 +68,7 @@ class DemoServiceTest {
     void calculatePow_whenExponentIsBlank_thenThrowException() {
         CalculatorException thrown = assertThrows(
                 CalculatorException.class,
-                () -> demoService.calculatePow("9", ""),
-                "Exponent must not be null or empty."
+                () -> demoService.calculatePow("9", "")
         );
         assertThat(thrown.getMessage()).isEqualTo("Exponent must not be null or empty.");
     }

@@ -93,8 +93,7 @@ public class CalculatorServiceImplTest {
     void add_whenNum2IsNotANumber_thenThrowException() {
         CalculatorException thrown = assertThrows(
                 CalculatorException.class,
-                () -> calculatorService.add("3", "test"),
-                "Num2 should be a number."
+                () -> calculatorService.add("3", "test")
         );
         assertThat(thrown.getMessage()).isEqualTo("Num2 should be a number.");
     }
