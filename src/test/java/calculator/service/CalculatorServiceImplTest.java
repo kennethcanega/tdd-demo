@@ -48,8 +48,7 @@ public class CalculatorServiceImplTest {
     void add_whenNum1IsNull_thenThrowException() {
         CalculatorException thrown = assertThrows(
                 CalculatorException.class,
-                () -> calculatorService.add(null, "3"),
-                "Num1 is required."
+                () -> calculatorService.add(null, "3")
         );
         assertThat(thrown.getMessage()).isEqualTo("Num1 is required.");
     }
@@ -58,8 +57,7 @@ public class CalculatorServiceImplTest {
     void add_whenNum1IsBlank_thenThrowException() {
         CalculatorException thrown = assertThrows(
                 CalculatorException.class,
-                () -> calculatorService.add("", "3"),
-                "Num1 is required."
+                () -> calculatorService.add("", "3")
         );
         assertThat(thrown.getMessage()).isEqualTo("Num1 is required.");
     }
@@ -68,8 +66,7 @@ public class CalculatorServiceImplTest {
     void add_whenNum2IsNull_thenThrowException() {
         CalculatorException thrown = assertThrows(
                 CalculatorException.class,
-                () -> calculatorService.add("3", null),
-                "Num2 is required."
+                () -> calculatorService.add("3", null)
         );
         assertThat(thrown.getMessage()).isEqualTo("Num2 is required.");
     }
@@ -78,8 +75,7 @@ public class CalculatorServiceImplTest {
     void add_whenNum2IsBlank_thenThrowException() {
         CalculatorException thrown = assertThrows(
                 CalculatorException.class,
-                () -> calculatorService.add("3", ""),
-                "Num2 is required."
+                () -> calculatorService.add("3", "")
         );
         assertThat(thrown.getMessage()).isEqualTo("Num2 is required.");
     }
@@ -88,8 +84,7 @@ public class CalculatorServiceImplTest {
     void add_whenNum1IsNotANumber_thenThrowException() {
         CalculatorException thrown = assertThrows(
                 CalculatorException.class,
-                () -> calculatorService.add("test", "3"),
-                "Num1 should be a number."
+                () -> calculatorService.add("test", "3")
         );
         assertThat(thrown.getMessage()).isEqualTo("Num1 should be a number.");
     }
@@ -108,8 +103,7 @@ public class CalculatorServiceImplTest {
     void add_whenNum1IsLessThanZero_thenThrowException() {
         CalculatorException thrown = assertThrows(
                 CalculatorException.class,
-                () -> calculatorService.add("-3", "10"),
-                "Num1 should be greater than or equal to 0."
+                () -> calculatorService.add("-3", "10")
         );
         assertThat(thrown.getMessage()).isEqualTo("Num1 should be greater than or equal to 0.");
     }
@@ -118,8 +112,7 @@ public class CalculatorServiceImplTest {
     void add_whenNum2IsLessThanZero_thenThrowException() {
         CalculatorException thrown = assertThrows(
                 CalculatorException.class,
-                () -> calculatorService.add("3", "-3"),
-                "Num2 should be greater than or equal to 0."
+                () -> calculatorService.add("3", "-3")
         );
         assertThat(thrown.getMessage()).isEqualTo("Num2 should be greater than or equal to 0.");
     }
